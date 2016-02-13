@@ -1,0 +1,79 @@
+@import 'fn.scss';
+
+$blue: rgb(48,60,147);
+$red:#CC2524;
+$font: 'tex_gyre_bonumregular';
+
+html,body {
+    padding:0;
+    margin:0;
+    height:100%;
+    //background-color:$red;
+}
+
+body {
+    @include flexbox();
+    @include justify(center);
+    @include align(center);
+}
+
+p {
+    @include transition(opacity 3s ease-in-out);
+    @include flexbox();
+    @include justify(center);
+    @include align(center);
+
+    position:relative;
+    border:solid 1px #333;
+    width: 75vw;
+    height:30vh;
+    margin:0;
+
+    &.ease-scale {
+        $dur: .8s;
+        @include transition(transform $dur ease-in-out,opacity $dur ease-in-out);
+    }
+
+    &.submitted {
+        @include transform(scale(1.5,1.5) translateY(-25px));
+        opacity: 0;
+    }
+
+    .bleed {
+        position:absolute;
+        background-color: $blue;
+    }
+
+    textarea {
+        width:90%;
+        border:none;
+        overflow: auto;
+        outline: none;
+        font-family:$font;
+        background:inherit;
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+        font-size:41px;
+        text-align: center;
+        color:$blue;
+    }
+}
+
+#screen {
+    @include transition(opacity .3s ease-in-out);
+    position:fixed;
+    width:100vw;
+    height:100vw;
+    left:0;
+    top:0;
+    opacity:0;
+
+    &.on {
+        opacity:1;
+    }
+
+    background: linear-gradient(45deg, $red 0%, rgba(255,255,255,0) 0%);
+}
