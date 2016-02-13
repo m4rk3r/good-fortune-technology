@@ -18,7 +18,7 @@ body {
 }
 
 p {
-    @include transition(opacity 3s ease-in-out);
+    @include transition(opacity 1s ease-in-out);
     @include flexbox();
     @include justify(center);
     @include align(center);
@@ -29,13 +29,7 @@ p {
     height:30vh;
     margin:0;
 
-    &.ease-scale {
-        $dur: .8s;
-        @include transition(transform $dur ease-in-out,opacity $dur ease-in-out);
-    }
-
     &.submitted {
-        @include transform(scale(1.5,1.5) translateY(-25px));
         opacity: 0;
     }
 
@@ -63,7 +57,7 @@ p {
 }
 
 #screen {
-    @include transition(opacity .3s ease-in-out);
+    @include transition(opacity .8s ease-in-out);
     position:fixed;
     width:100vw;
     height:100vw;
@@ -74,6 +68,4 @@ p {
     &.on {
         opacity:1;
     }
-
-    background: linear-gradient(45deg, $red 0%, rgba(255,255,255,0) 0%);
 }

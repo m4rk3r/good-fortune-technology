@@ -3,6 +3,7 @@ var corners = [{'top':-2,'left':-2},{'top':-2,'right':-2},{'bottom':-2,'left':-2
 var init = true;
 var ftn; var input; var screen;
 
+
 /*
  * Easing Functions - inspired from http://gizma.com/easing/
  * only considering the t value for the range [0, 1] => [0, 1]
@@ -66,7 +67,6 @@ function reset(){
     ftn.find('span').remove();
     plot_corners();
     input.val('');
-    ftn.removeClass('submitted');
     input.focus();
 }
 
@@ -88,7 +88,6 @@ $(function (){
 
             $.post(resource, {text:input.val()}, function (e){
                 input.blur();
-                //ftn.addClass('ease-scale').addClass('submitted');
                 screen.css('display','block');
                 screen.addClass('on');
                 var offset = 40;
@@ -100,12 +99,13 @@ $(function (){
                     if(pos>0)
                         f = Ease.easeInOutQuad(pos/100);
 
-                    pos+=1.5;
+                    pos+=1;
 
                     if(pos<100)
                         window.requestAnimationFrame(animate);
                     else
                         reset();
+
                 }
                 window.requestAnimationFrame(animate);
             });
