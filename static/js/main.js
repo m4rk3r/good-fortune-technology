@@ -42,14 +42,14 @@ Ease = {
 function plot_corners(){
     _(corners).each(function (c){
         /* 33% chance not visible */
-        if(_.random(3)===2)return;
-        var h = _.random(1-2,30);
+        if(_.random(2)===2)return;
+        var h = _.random(10,30);
         var w = _.random(40,100);
         var o = $('<span class="bleed" />');
         o.css(c);
 
         /* 20% chance for vertical */
-        if(_.random(5)===0)
+        if(_.random(5)===5)
             o.css({width:h,height:w});
         else
             o.css({width:w,height:h});
