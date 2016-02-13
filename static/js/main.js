@@ -78,7 +78,7 @@ $(function (){
     var max = 50;
     input.on('keydown', function (evt){
         var words = input.val().split(' ').length;
-        var s = max - max * words/max;
+        var s = Math.max(15,max - max * words/max);
         input.css({
             'font-size': s
         });
