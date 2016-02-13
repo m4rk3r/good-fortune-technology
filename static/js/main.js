@@ -75,10 +75,10 @@ $(function (){
     input = $('#input');
     screen = $('#screen');
 
-    var init = 50;
+    var max = 50;
     input.on('keydown', function (evt){
         var words = input.val().split(' ').length;
-        var s = init - init * words/init;
+        var s = max - max * words/max;
         input.css({
             'font-size': s
         });
@@ -99,7 +99,7 @@ $(function (){
                     if(pos>0)
                         f = Ease.easeInOutQuad(pos/100);
 
-                    pos+=1;
+                    pos+=1.25;
 
                     if(pos<100)
                         window.requestAnimationFrame(animate);
