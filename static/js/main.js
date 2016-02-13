@@ -96,9 +96,7 @@ $(function (){
                 var animate = function (){
                     screen.css('background','linear-gradient(45deg, #FFF '+(f*100)+'%, rgba(255,255,255,0) '+((100*f)+offset)+'%)');
 
-                    if(pos>0)
-                        f = Ease.easeInOutQuad(pos/100);
-
+                    f = Ease.easeInOutQuad(pos/100);
                     pos+=1.25;
 
                     if(pos<100)
