@@ -157,5 +157,5 @@ LOGGING = {
 
 try:
     from local_settings import *
-except ImportErorr:
+except ImportError:
     pass
