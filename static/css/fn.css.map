@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AA+BA,mBAAmB;AA2EnB,eAAgB;EACd,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,IAAI;;AAGb;;IAEI;AAmBJ;;;GAGG",
+"sources": ["../scss/fn.scss"],
+"names": [],
+"file": "fn.css"
+}

@@ -12,6 +12,7 @@ router.register(r'fortune', FortuneAPI)
 
 urlpatterns = patterns('',
     url(r'^$', 'fortunes.views.home', name='home'),
+    url(r'^seeking/$', 'fortunes.views.seeking', name='seeking'),
     url(r'^api/', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
 )

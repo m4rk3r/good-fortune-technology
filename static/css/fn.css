@@ -3,3 +3,13 @@
   content: "";
   display: table;
   clear: both; }
+
+/**
+ * Below from https://gist.github.com/Integralist/3931680
+ **/
+/*
+    Example usage:
+    @include animation(10s, 5s, changecolour)
+ */
+
+/*# sourceMappingURL=fn.css.map */

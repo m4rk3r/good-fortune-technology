@@ -4,6 +4,13 @@
   display: table;
   clear: both; }
 
+/**
+ * Below from https://gist.github.com/Integralist/3931680
+ **/
+/*
+    Example usage:
+    @include animation(10s, 5s, changecolour)
+ */
 html, body {
   padding: 0;
   margin: 0;
@@ -78,3 +85,5 @@ p {
   display: none; }
   #screen.on {
     opacity: 1; }
+
+/*# sourceMappingURL=main.css.map */

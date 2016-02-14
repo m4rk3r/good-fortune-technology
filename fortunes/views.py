@@ -12,6 +12,10 @@ def home(request):
     return render_to_response('index.html')
 
 
+def seeking(request):
+    return render_to_response('seeking.html')
+
+
 class FortuneAPI(viewsets.ModelViewSet, generics.CreateAPIView):
     queryset = Fortune.objects.all()
     serializer_class = FortuneSerializer
