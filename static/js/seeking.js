@@ -67,13 +67,13 @@ function plot_corners(obj){
 }
 
 function transformer(x,y,r,s) {
-    return 'translate('+x+'%, '+y+'%) '+
+    return 'translate('+x+'px, '+y+'px) '+
            'rotate('+r+'deg) '+
            'scale('+s+','+s+')';
 }
 
 function generate_fortune() {
-    var ftn = $(template({fortune:_.sample(fortunes).text}));
+    var ftn = $(template({fortune:_.sample(fortunes).text.replace('\n','<BR>')}));
     fit_type(ftn.find('p'));
     plot_corners(ftn.find('.container'));
     $('body').append(ftn);
@@ -83,7 +83,9 @@ function generate_fortune() {
         ftn.addClass('appear');
     },50);
 
-    var x = _.random(-75,75); var y = _.random(-100,100);
+    var _h = window.innerHeight/2;
+    var _w = window.innerWidth/2;
+    var x = _.random(-_w,_w); var y = _.random(-_h,_h);
     var r = _.random(-45,45);
     var s = 0.125;
     var s2 = 0.08;
