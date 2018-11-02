@@ -10,7 +10,7 @@
 .paper {
   position: relative;
   min-height: 20px;
-  padding: 19px;
+  padding: 25px 20px;
   margin-bottom: 20px;
   background-color: #fafafa;
   border: 1px solid #fafafa;
@@ -148,3 +148,5 @@
 
 .paper-curve-horiz:before {
   top: 0; }
+
+/*# sourceMappingURL=paper.css.map */

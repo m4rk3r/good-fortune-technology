@@ -22,6 +22,9 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -63,6 +66,7 @@ p {
     outline: none;
     font-family: "tex_gyre_bonumregular";
     background: inherit;
+    height: 100%;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;

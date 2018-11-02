@@ -1,6 +1,6 @@
 # Django settings for good_fortune project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 import os

@@ -68,6 +68,9 @@ function reset(){
     plot_corners();
     input.val('');
     input.focus();
+    input.css({
+     'font-size': ''
+    });
 }
 
 $(function (){
@@ -78,13 +81,17 @@ $(function (){
     var max = 50;
     input.on('keydown', function (evt){
         var words = input.val().split(' ').length;
-        var s = Math.max(15,max - max * words/max);
+        var s = Math.max(20, max - max * words/max);
         input.css({
             'font-size': s
         });
 
         if(evt.keyCode === 13 && !evt.shiftKey){
             evt.preventDefault();
+
+            if (!window.confirm("Ready to submit?! \n(use shift + enter if you were trying to add new lines to your message)")) {
+              return;
+            }
 
             $.post(resource, {text:input.val()}, function (e){
                 input.blur();
