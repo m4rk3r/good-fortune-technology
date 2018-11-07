@@ -52,7 +52,7 @@ p {
         text-align: center;
         color:$blue;
 
-        @media (min-width: 400px) {
+        @media (max-width: 400px) {
             font-size: 21px;
         }
     }
