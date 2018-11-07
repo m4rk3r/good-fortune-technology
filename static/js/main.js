@@ -82,6 +82,12 @@ $(function (){
     input.on('keydown', function (evt){
         var words = input.val().split(' ').length;
         var s = Math.max(20, max - max * words/max);
+
+        // scale down for mobile
+        if (window.innerWidth <= 400) {
+          s *= 0.75;
+        }
+
         input.css({
             'font-size': s
         });

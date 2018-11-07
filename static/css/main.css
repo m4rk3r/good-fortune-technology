@@ -73,6 +73,9 @@ p {
     font-size: 41px;
     text-align: center;
     color: #303c93; }
+    @media (min-width: 400px) {
+      p textarea {
+        font-size: 21px; } }
 
 #screen {
   -webkit-transition: opacity 0.8s ease-in-out;

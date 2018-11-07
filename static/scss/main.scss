@@ -51,6 +51,10 @@ p {
         font-size:41px;
         text-align: center;
         color:$blue;
+
+        @media (min-width: 400px) {
+            font-size: 21px;
+        }
     }
 }
 
